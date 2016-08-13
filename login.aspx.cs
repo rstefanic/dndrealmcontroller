@@ -34,7 +34,7 @@ public partial class login : System.Web.UI.Page
 
     private bool loginOp(string ID, String password)
     {
-        using (MySqlConnection conn = new MySqlConnection("server=educational.cb2varv9t8vg.us-west-2.rds.amazonaws.com;database=tmp;uid=csci467;pwd=access;"))
+        using (MySqlConnection conn = new MySqlConnection(";"))
         {
             MySqlCommand cmd = new MySqlCommand();  // create sql command object
             cmd.Connection = conn; // connection varible
