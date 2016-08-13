@@ -17,9 +17,14 @@
 </section>
 
 <div class="page-home">
-    <%if (flag == 1){ %>
-  <section class="page-home" id="error">
-    <p>Wong!!</p>
+    <%if (flag == 401){ %>
+  <section class="page-home" id="IDpassError">
+    <p>ID or password incorrect!</p>
+  </section>
+    <%} %>
+    <%if (flag == 502){ %>
+  <section class="page-home" id="DBerror">
+    <p>Could not connect to Database</p>
   </section>
     <%} %>
 
@@ -64,3 +69,4 @@
 <script src="assets/js/functions.js" type="text/javascript"></script>
 </body>
 </html>
+

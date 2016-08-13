@@ -4,9 +4,30 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>D&amp;D Realm Controller</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="shortcut icon" href="assets/img/favicons/favicon.ico"/>
+  <link href="https://fonts.googleapis.com/css?family=Uncial+Antiqua" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body>
+<section class="hero" id ="header">
+  <h1 class="page-home">D&amp;D Realm Controller</h1>
+  <nav>
+  <ul>
+    <li>Quest Log</li>
+    <li>Announcements</li>
+    <li>Adventurers
+      <ul class="drop-menu">
+        <li>Active Duty</li>
+        <li>Reservers</li>
+        <li>Create New</li>
+      </ul>
+      </li>
+    </ul>
+  </nav>
+</section>
     <form id="form1" runat="server">
     <div>
         <asp:ContentPlaceHolder id="MainContentPlaceHolder1" runat="server">
@@ -14,5 +35,10 @@
         </asp:ContentPlaceHolder>
     </div>
     </form>
+
+    <footer class="page-home">&copy; Ben Benson &amp; Robert Stefanic</footer>
+
+    <script src="assets/js/jquery-2.1.4.min.js"></script>
+   <script src="assets/js/functions.js" type="text/javascript"></script>
 </body>
 </html>
