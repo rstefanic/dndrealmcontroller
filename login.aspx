@@ -46,7 +46,6 @@
     |   |   | -- Teifling
     |   |   | -- Half-Elf
     |   |   | -- Dwarf
-    | -- Generate New Character
     |   | -- Class
     |   |   | -- Fighter
     |   |   | -- Ranger
@@ -65,4 +64,3 @@
 <script src="assets/js/functions.js" type="text/javascript"></script>
 </body>
 </html>
-
