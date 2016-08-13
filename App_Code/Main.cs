@@ -20,7 +20,7 @@ public class Main
             cmd.Connection = conn; // connection varible
             
             //sql string to search for admin
-            string admin = "Select * From users Where id = @id AND pass = @password;";
+            string admin = "Select * From users Where id = @id AND password = @password;";
             cmd.Parameters.AddWithValue("@id", ID); // sql parameter list
             cmd.Parameters.AddWithValue("@password", password);
 
