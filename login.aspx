@@ -1,3 +1,5 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="login" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,17 +17,21 @@
 </section>
 
 <div class="page-home">
-
+    <%if (flag == 1){ %>
   <section class="page-home" id="error">
-    <p>Error: Invalid password or login</p>
+    <p>Wong!!</p>
   </section>
+    <%} %>
+
 
   <section class="page-home">
+    <form action="login.aspx" method="post">
     <h2>Realm ID#: </h2> <input name="login" type="text"/>
     <h2>Password: </h2> <input name="password" type="password"/>
     <br/>
     <br/>
-    <input id="submit" name="submit" type="submit"/>
+    <input id="submit" value="Login" name="submit" type="submit"/>
+    </form>
 
   </section>
 
@@ -59,3 +65,4 @@
 <script src="assets/js/functions.js" type="text/javascript"></script>
 </body>
 </html>
+
