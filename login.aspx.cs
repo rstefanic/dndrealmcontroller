@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
+using System.Web.Security;
 
 public partial class login : System.Web.UI.Page
 {
@@ -20,7 +21,7 @@ public partial class login : System.Web.UI.Page
             switch (Main.login(ID, password))
             {
                 case 200:  // result success
-                    Response.Redirect("home.aspx");
+                    FormsAuthentication.RedirectFromLoginPage(ID, false);
                     break;
                 case 401:  // result id/password incorrect
                     flag = 401;
