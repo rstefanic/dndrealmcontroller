@@ -1,6 +1,7 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
 using System.Configuration;
+using System.Collections.Generic;
 
 public class Main
 {
@@ -13,7 +14,6 @@ public class Main
     
     public static int login(string ID, String password)
     {
-
         using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["connectDB"].ToString()))
         {
             MySqlCommand cmd = new MySqlCommand();  // create sql command object
@@ -37,5 +37,32 @@ public class Main
             else
                 return 401;
         }
+    }
+    public static List<Anouncements> AnouncementViews()
+    {
+        List<Anouncements> result = new List<Anouncements>();
+
+        using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["connectDB"].ToString()))
+        {
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = conn;
+
+            string views = "select * from anouncements;";
+            cmd.CommandText = views;
+
+            conn.Open();
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+
+            while(reader.Read())
+                result.Add(new Anouncements
+                {
+                    ID = reader.GetInt32(0),
+                    date = reader.GetString(1),
+                    text = reader.GetString(2)
+                });
+        }
+        return result;
     }
 }

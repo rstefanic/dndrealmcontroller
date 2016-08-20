@@ -35,7 +35,6 @@
         </asp:ContentPlaceHolder>
     </div>
     </form>
-
     <footer class="page-home">&copy; Ben Benson &amp; Robert Stefanic</footer>
 
     <script src="assets/js/jquery-2.1.4.min.js"></script>
