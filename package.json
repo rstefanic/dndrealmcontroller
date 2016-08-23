@@ -1,0 +1,20 @@
+{
+  "name": "dndrealmcontroller",
+  "version": "1.0.0",
+  "description": "control your dnd characters",
+  "main": "login.aspx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rstefanic/dndrealmcontroller.git"
+  },
+  "author": "Ben Benson and Robert Stefanic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rstefanic/dndrealmcontroller/issues"
+  },
+  "homepage": "https://github.com/rstefanic/dndrealmcontroller#readme",
+  "dependencies": {}
+}
