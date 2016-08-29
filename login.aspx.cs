@@ -18,7 +18,7 @@ public partial class login : System.Web.UI.Page
 
         if (Request.RequestType == "POST")
         {
-            switch (Main.login(ID, password))
+            switch (Main.Login(ID, password))
             {
                 case 200:  // result success
                     FormsAuthentication.RedirectFromLoginPage(ID, false);

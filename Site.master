@@ -17,7 +17,7 @@
   <nav>
   <ul>
     <li>Quest Log</li>
-    <li>Announcements</li>
+    <li><a href="default.aspx">Announcements</a></li>
     <li>Adventurers
       <ul class="drop-menu">
         <li>Active Duty</li>

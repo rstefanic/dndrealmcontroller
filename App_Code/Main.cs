@@ -12,7 +12,7 @@ public class Main
     }
 
     
-    public static int login(string ID, String password)
+    public static int Login(string ID, String password)
     {
         using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["connectDB"].ToString()))
         {
@@ -64,5 +64,30 @@ public class Main
                 });
         }
         return result;
+    }
+    public static int AddAnouncements(string date, string text)
+    {
+        using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["connectDB"].ToString()))
+        {
+            MySqlCommand cmd = new MySqlCommand();  // create sql command object
+            cmd.Connection = conn; // connection varible
+
+            //sql string to search for admin
+            string admin = "insert into anouncements (date, anouncement) values (@date, @text);";
+            cmd.Parameters.AddWithValue("@date", date); // sql parameter list
+            cmd.Parameters.AddWithValue("@text", text);
+
+            cmd.CommandText = admin;
+
+            try { conn.Open(); }
+            catch { return 501; }
+
+            try { cmd.ExecuteNonQuery(); }
+            catch { return 502; }
+
+            conn.Close(); // close connection
+            return 1;
+        }
+
     }
 }

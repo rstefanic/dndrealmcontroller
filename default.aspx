@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentPlaceHolder1" Runat="Server">
     <div class="page-home"> <!-- Head of the Announcments and Homepage -->
     <h1 class="header">Announcements</h1>
+        <a href="defaultEdit.aspx" class="button" style="width: 15%; text-decoration: none">Edit</a>
     <!-- Start Announcements -->
         <%foreach (var item in Main.AnouncementViews()){ %>
     <div class="announcement clearfix">
@@ -12,7 +13,8 @@
       </div>
     </div>
         <%} %>
-</div><!-- End of Announcements area -->
+   </div>
+    <!-- End of Announcements area -->
 </asp:Content>
 
 
