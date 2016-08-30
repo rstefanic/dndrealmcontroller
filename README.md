@@ -22,6 +22,11 @@ Shields are confined to IDs 300-399
 
 ## Weapons
 
+## Adventure Gear
+
+If a price value is null, then that means that the DM sets the price in that realm.
+
+
 ## Simple Melee Weapons
 ## Simple Ranged Weapons
 ## Martial Melee Weapons
