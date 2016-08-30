@@ -86,3 +86,4 @@ INSERT INTO adventure_gear VALUES ("Vial", 1, .1);
 INSERT INTO adventure_gear VALUES ("Waterskin (full)", .2, 4);
 INSERT INTO adventure_gear VALUES ("Whetstone", .01, 1);
 
+ALTER TABLE adventure_gear ADD COLUMN id INTEGER AUTO_INCREMENT PRIMARY KEY FIRST;
