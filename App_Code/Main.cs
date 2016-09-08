@@ -62,6 +62,7 @@ public class Main
                     date = reader.GetString(1),
                     text = reader.GetString(2)
                 });
+            conn.Close();
         }
         return result;
     }
@@ -89,5 +90,33 @@ public class Main
             return 1;
         }
 
+    }
+    public static List<Quests> DisplayQuests()
+    {
+        List<Quests> results = new List<Quests>();
+
+        using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["connectDB"].ToString()))
+        {
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = conn;
+
+            string table = "SELECT * FROM quest_log;";
+            cmd.CommandText = table;
+
+            conn.Open();
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+                results.Add(new Quests
+                {
+                    ID = reader.GetInt32(0),
+                    Date = reader.GetString(1),
+                    Text = reader.GetString(2)    
+                });
+
+            conn.Close();
+        }
+        return results;
     }
 }
