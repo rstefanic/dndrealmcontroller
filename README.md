@@ -3,7 +3,18 @@ Control and manage characters for your DnD games
 
 ---
 
-# Database
+# Database 
+
+## Trinkets
+In the application, roll a number between 1 and 100, and select that random number from the table in order to roll that random number from the table.
+
+
+## Weapons
+### Damage Column
+For the damage column, whatever the number will be, it will be one of that die. For example, if the number in the damage column is 4, then that calls for a 1d4.
+### Type of damage Column
+A 1 represents bludgening, a 2 represents piercing, and a 3 represents slashing.
+
 
 ## Armor
 
